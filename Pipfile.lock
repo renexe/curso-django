@@ -144,7 +144,6 @@
                 "sha256:355fc7e0c0b8a133045f0d6089bde351c845e7b52b99fec5903b4ea3ab5f6aab",
                 "sha256:7877f68effde3c2baadcff807a5d13f01019a337f9596eece0d64e57393adf3a"
             ],
-            "index": "pypi",
             "version": "==2.1.9"
         },
         "colorama": {
