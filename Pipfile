@@ -12,6 +12,8 @@ codecov = "*"
 [packages]
 django = "*"
 gunicorn = "*"
+python-decouple = "*"
+confi = "*"
 
 [requires]
 python_version = "3.8"
