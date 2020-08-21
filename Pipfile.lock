@@ -24,13 +24,6 @@
             "markers": "python_version >= '3.5'",
             "version": "==3.2.10"
         },
-        "confi": {
-            "hashes": [
-                "sha256:0ffb8ebba51194f7be7b3b1bc0946216de42417e83fd487e83e8efb0450897c6"
-            ],
-            "index": "pypi",
-            "version": "==0.0.4.1"
-        },
         "django": {
             "hashes": [
                 "sha256:1a63f5bb6ff4d7c42f62a519edc2adbb37f9b78068a5a862beff858b68e3dc8b",
