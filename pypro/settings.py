@@ -130,6 +130,7 @@ AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
 # Storage configuration in S3 AWS
 # ---------------------------------------------------------------
+
 if AWS_ACCESS_KEY_ID:
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
     AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
@@ -144,6 +145,7 @@ if AWS_ACCESS_KEY_ID:
 
     # Static access
     # -------------------------------------------------------
+
     STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
     STATIC_S3_PATH = 'static'
     STATIC_ROOT = f'/{STATIC_S3_PATH}/'
@@ -152,6 +154,7 @@ if AWS_ACCESS_KEY_ID:
 
     # Uploads media folder
     # -------------------------------------------------------
+
     DEFAULT_FILE_STORAGE = 's3_folder_storage.s3.DefaultStorage'
     DEFAULT_S3_PATH = 'media'
     MEDIA_ROOT = f'/{DEFAULT_S3_PATH}/'
