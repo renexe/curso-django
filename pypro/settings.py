@@ -33,8 +33,6 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 # Application definition
 
-STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -137,13 +135,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 COLLECTFAST_ENABLED = False
 
-AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
-
 AUTH_USER_MODEL = 'base.User'
 
-# Storage configuration in S3 AWS
-# ---------------------------------------------------------------
-
+# STORAGE CONFIGURATION IN S3 AWS
+# ------------------------------------------------------------------------------
+# Uploaded Media Files
+# ------------------------------------------------------------------------------
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 if AWS_ACCESS_KEY_ID:
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
     AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
@@ -160,6 +158,7 @@ if AWS_ACCESS_KEY_ID:
     # -------------------------------------------------------
 
     STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
+    COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
     STATIC_S3_PATH = 'static'
     STATIC_ROOT = f'/{STATIC_S3_PATH}/'
     STATIC_URL = f'//s3.amazonaws.com/{AWS_STORAGE_BUCKET_NAME}/{STATIC_S3_PATH}/'
