@@ -11,4 +11,3 @@ def test_status_code(client: Client):
 def test_title(client: Client):
     resp = client.get('/')
     assert_contains(resp, '<title>Curso Django Pro</title>')
-
