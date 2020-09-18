@@ -131,3 +131,9 @@ dmypy.json
 # staticfiles e mediafiles
 staticfiles/
 mediafiles/
+
+# Postgres files for local development
+.pgdata/
+docker-compose.yml
+
+dbnavigator.xml
