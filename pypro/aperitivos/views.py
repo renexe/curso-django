@@ -1,20 +1,10 @@
-from django.shortcuts import render
-from django.urls import reverse
+from django.shortcuts import render, get_object_or_404
 
-
-class Video:
-    def __init__(self, slug, titulo, vimeo_id):
-        self.slug = slug
-        self.titulo = titulo
-        self.vimeo_id = vimeo_id
-
-    def get_absolute_url(self):
-        return reverse('aperitivos:video', args=(self.slug,))
-
+from pypro.aperitivos.models import Video
 
 videos = [
-   Video('motivacao', 'Vídeo Aperitivo: Motivação', 74410733),
-   Video('instalacao-windows', 'Instalação Windows', 74410744),
+   Video(slug='motivacao', titulo='Vídeo Aperitivo: Motivação', vimeo_id='74410733'),
+   Video(slug='instalacao-windows', titulo='Instalação Windows', vimeo_id='74410744'),
 ]
 
 videos_dct = {v.slug: v for v in videos}
@@ -25,5 +15,5 @@ def indice(request):
 
 
 def video(request, slug):
-    video = videos_dct[slug]
+    video = get_object_or_404(Video, slug=slug)
     return render(request, 'aperitivos/video.html', context={'video': video})
