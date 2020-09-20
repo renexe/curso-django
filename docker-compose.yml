@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  database:
+    container_name: cursodjango_database
+    image: postgres
+    volumes:
+      - ./.pgdata:/Program Files/PostgreSQL/12/data
+    environment:
+      - LC_ALL=C.UTF-8
+      - POSTGRES_PASSWORD=pythonpro
+      - POSTGRES_USER=pythonpro
+      - POSTGRES_DB=cursodjango_database
+    ports:
+      - 5434:5432
