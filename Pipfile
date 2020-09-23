@@ -21,6 +21,7 @@ collectfast = "*"
 django-debug-toolbar = "*"
 sentry-sdk = "*"
 boto3 = "*"
+django-ordered-model = "*"
 
 [requires]
 python_version = "3.8"
