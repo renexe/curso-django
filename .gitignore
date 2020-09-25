@@ -137,3 +137,5 @@ mediafiles/
 docker-compose.yml
 
 dbnavigator.xml
+
+.idea
