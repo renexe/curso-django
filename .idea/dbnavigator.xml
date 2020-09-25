@@ -41,6 +41,11 @@
     <connection id="3b1c47f0-1757-48e8-9cfd-b19b3e1aff9a" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="3b1c47f0-1757-48e8-9cfd-b19b3e1aff9a" dataset="public.modulos_modulo" active-filter-id="f84b0fdd-a4c6-45e8-976e-34dbf517e00c">
+      <filter id="f84b0fdd-a4c6-45e8-976e-34dbf517e00c" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="is not null" value="" active="true" />
+      </filter>
+    </filter-actions>
     <filter-actions connection-id="3b1c47f0-1757-48e8-9cfd-b19b3e1aff9a" dataset="public.base_user" active-filter-id="6b9808de-f37d-4b05-92db-339b5d7d47c3">
       <filter id="6b9808de-f37d-4b05-92db-339b5d7d47c3" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="id" operator="is not null" value="" active="true" />
