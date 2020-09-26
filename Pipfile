@@ -8,7 +8,7 @@ flake8 = "*"
 pytest-django = "*"
 pytest-cov = "*"
 codecov = "*"
-model-mommy = "*"
+model-bakery = "*"
 
 [packages]
 django = "*"
