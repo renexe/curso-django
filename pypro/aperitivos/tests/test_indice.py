@@ -5,7 +5,7 @@ from model_bakery import baker
 from pypro.aperitivos.models import Video
 from pypro.django_assertions import assert_contains
 
-pull
+
 @pytest.fixture
 def videos(db):
     return baker.make(Video, 3)
