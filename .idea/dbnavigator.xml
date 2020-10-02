@@ -25,7 +25,8 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="3b1c47f0-1757-48e8-9cfd-b19b3e1aff9a">
-        <schema name="public" object-types="view, table" />
+        <schema name="pg_catalog" object-types="function" />
+        <schema name="public" object-types="view, index, sequence, function, constraint, column, dataset trigger, table" />
       </connection>
     </loaded-nodes>
   </component>
@@ -48,6 +49,14 @@
     </filter-actions>
     <filter-actions connection-id="3b1c47f0-1757-48e8-9cfd-b19b3e1aff9a" dataset="public.base_user" active-filter-id="6b9808de-f37d-4b05-92db-339b5d7d47c3">
       <filter id="6b9808de-f37d-4b05-92db-339b5d7d47c3" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="is not null" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="3b1c47f0-1757-48e8-9cfd-b19b3e1aff9a" dataset="public.turmas_turma_matriculas" active-filter-id="ecd840b6-58aa-4a51-8604-bd11eddbd195">
+      <filter id="ecd840b6-58aa-4a51-8604-bd11eddbd195" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
+    </filter-actions>
+    <filter-actions connection-id="3b1c47f0-1757-48e8-9cfd-b19b3e1aff9a" dataset="public.turmas_turma" active-filter-id="8b9c421b-a046-4d4b-8868-5db75e2bdf5e">
+      <filter id="8b9c421b-a046-4d4b-8868-5db75e2bdf5e" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="id" operator="is not null" value="" active="true" />
       </filter>
     </filter-actions>
