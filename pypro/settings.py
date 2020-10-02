@@ -31,8 +31,13 @@ DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
-# Application definition
+AUTH_USER_MODEL = 'base.User'
 
+LOGIN_URL = '/contas/login/'
+LOGIN_REDIRECT_URL = '/modulos/'
+LOGOUT_REDIRECT_URL = '/'
+
+# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -140,8 +145,6 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 COLLECTFAST_ENABLED = False
-
-AUTH_USER_MODEL = 'base.User'
 
 # STORAGE CONFIGURATION IN S3 AWS
 # ------------------------------------------------------------------------------
